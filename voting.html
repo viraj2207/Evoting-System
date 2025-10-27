@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+    <title>Voting Ballot - SecureVote</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="voting-page">
+    <div class="background-animation">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+    </div>
+
+    <nav class="navbar voting-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-vote-yea"></i>
+                <span>SecureVote</span>
+            </div>
+            <div class="voting-status">
+                <div class="timer">
+                    <i class="fas fa-clock"></i>
+                    <span id="votingTimer">29:45</span>
+                </div>
+                <div class="user-info">
+                    <i class="fas fa-user-circle"></i>
+                    <span>John Doe</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="voting-main">
+        <div class="voting-container">
+            <div class="voting-header">
+                <h1>2024 General Election Ballot</h1>
+                <p>Please review all candidates carefully before casting your vote</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="votingProgress"></div>
+                </div>
+                <span class="progress-text">0 of 3 positions voted</span>
+            </div>
+
+            <div class="ballot-sections">
+                <!-- Presidential Election -->
+                <div class="ballot-section">
+                    <div class="section-header">
+                        <h2>President of the United States</h2>
+                        <p>Vote for one (1) candidate</p>
+                        <span class="required-badge">Required</span>
+                    </div>
+                    
+                    <div class="candidates-grid">
+                        <div class="candidate-card" data-position="president" data-candidate="johnson">
+                            <div class="candidate-photo">
+                                <div class="photo-placeholder">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                            <div class="candidate-info">
+                                <h3>Sarah Johnson</h3>
+                                <p class="party">Democratic Party</p>
+                                <p class="experience">Former Governor, 12 years experience</p>
+                            </div>
+                            <div class="vote-button">
+                                <div class="vote-checkbox">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <span>Vote</span>
+                            </div>
+                        </div>
+
+                        <div class="candidate-card" data-position="president" data-candidate="williams">
+                            <div class="candidate-photo">
+                                <div class="photo-placeholder">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                            <div class="candidate-info">
+                                <h3>Michael Williams</h3>
+                                <p class="party">Republican Party</p>
+                                <p class="experience">Business Leader, Former Senator</p>
+                            </div>
+                            <div class="vote-button">
+                                <div class="vote-checkbox">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <span>Vote</span>
+                            </div>
+                        </div>
+
+                        <div class="candidate-card" data-position="president" data-candidate="davis">
+                            <div class="candidate-photo">
+                                <div class="photo-placeholder">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                            <div class="candidate-info">
+                                <h3>Robert Davis</h3>
+                                <p class="party">Independent</p>
+                                <p class="experience">Environmental Activist, Author</p>
+                            </div>
+                            <div class="vote-button">
+                                <div class="vote-checkbox">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <span>Vote</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Senate Election -->
+                <div class="ballot-section">
+                    <div class="section-header">
+                        <h2>U.S. Senate</h2>
+                        <p>Vote for one (1) candidate</p>
+                        <span class="required-badge">Required</span>
+                    </div>
+                    
+                    <div class="candidates-grid">
+                        <div class="candidate-card" data-position="senate" data-candidate="martinez">
+                            <div class="candidate-photo">
+                                <div class="photo-placeholder">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                            <div class="candidate-info">
+                                <h3>Maria Martinez</h3>
+                                <p class="party">Democratic Party</p>
+                                <p class="experience">Current Representative, 8 years</p>
+                            </div>
+                            <div class="vote-button">
+                                <div class="vote-checkbox">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <span>Vote</span>
+                            </div>
+                        </div>
+
+                        <div class="candidate-card" data-position="senate" data-candidate="thompson">
+                            <div class="candidate-photo">
+                                <div class="photo-placeholder">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                            <div class="candidate-info">
+                                <h3>James Thompson</h3>
+                                <p class="party">Republican Party</p>
+                                <p class="experience">Former Attorney General</p>
+                            </div>
+                            <div class="vote-button">
+                                <div class="vote-checkbox">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <span>Vote</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Local Proposition -->
+                <div class="ballot-section">
+                    <div class="section-header">
+                        <h2>Proposition 15 - Education Funding</h2>
+                        <p>Vote Yes or No</p>
+                        <span class="optional-badge">Optional</span>
+                    </div>
+                    
+                    <div class="proposition-content">
+                        <p class="proposition-text">
+                            Shall the city increase property taxes by 0.5% to fund new school infrastructure 
+                            and technology upgrades in public schools?
+                        </p>
+                        
+                        <div class="proposition-options">
+                            <div class="proposition-card" data-position="proposition" data-candidate="yes">
+                                <div class="option-icon yes">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                                <div class="option-content">
+                                    <h3>YES</h3>
+                                    <p>Support increased education funding</p>
+                                </div>
+                                <div class="vote-button">
+                                    <div class="vote-checkbox">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="proposition-card" data-position="proposition" data-candidate="no">
+                                <div class="option-icon no">
+                                    <i class="fas fa-thumbs-down"></i>
+                                </div>
+                                <div class="option-content">
+                                    <h3>NO</h3>
+                                    <p>Oppose increased taxation</p>
+                                </div>
+                                <div class="vote-button">
+                                    <div class="vote-checkbox">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="voting-actions">
+                <button class="btn btn-secondary" id="reviewBtn">
+                    <i class="fas fa-eye"></i>
+                    Review Ballot
+                </button>
+                <button class="btn btn-primary" id="submitBtn" disabled>
+                    <i class="fas fa-paper-plane"></i>
+                    Submit Ballot
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Review Modal -->
+    <div class="modal" id="reviewModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Review Your Ballot</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="review-section">
+                    <h3>Your Selections</h3>
+                    <div id="reviewContent"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="editBtn">Edit Ballot</button>
+                <button class="btn btn-primary" id="confirmSubmitBtn">Confirm & Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

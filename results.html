@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+    <title>Election Results - SecureVote</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="results-page">
+    <div class="background-animation">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-vote-yea"></i>
+                    <span>SecureVote</span>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="voting.html" class="nav-link">Vote</a>
+                <a href="admin.html" class="nav-link">Admin</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="results-main">
+        <div class="results-container">
+            <div class="results-header">
+                <h1>2024 General Election Results</h1>
+                <div class="election-status">
+                    <div class="status-badge live">
+                        <i class="fas fa-circle"></i>
+                        Live Results
+                    </div>
+                    <div class="last-updated">
+                        Last updated: <span id="lastUpdated">2 minutes ago</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-summary">
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="summary-content">
+                            <div class="summary-number">1,247,832</div>
+                            <div class="summary-label">Total Votes Cast</div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <div class="summary-content">
+                            <div class="summary-number">73.2%</div>
+                            <div class="summary-label">Voter Turnout</div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="summary-content">
+                            <div class="summary-number">2,847</div>
+                            <div class="summary-label">Precincts Reporting</div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="summary-content">
+                            <div class="summary-number">98.5%</div>
+                            <div class="summary-label">Precincts Complete</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-sections">
+                <!-- Presidential Results -->
+                <div class="results-section">
+                    <div class="section-header">
+                        <h2>President of the United States</h2>
+                        <div class="reporting-status">98.5% reporting</div>
+                    </div>
+                    
+                    <div class="candidates-results">
+                        <div class="candidate-result winner">
+                            <div class="candidate-info">
+                                <div class="candidate-photo">
+                                    <div class="photo-placeholder">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="winner-badge">
+                                        <i class="fas fa-crown"></i>
+                                    </div>
+                                </div>
+                                <div class="candidate-details">
+                                    <h3>Sarah Johnson</h3>
+                                    <p class="party democratic">Democratic Party</p>
+                                </div>
+                            </div>
+                            <div class="vote-stats">
+                                <div class="vote-count">642,891</div>
+                                <div class="vote-percentage">51.5%</div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill democratic" style="width: 51.5%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="candidate-result">
+                            <div class="candidate-info">
+                                <div class="candidate-photo">
+                                    <div class="photo-placeholder">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                </div>
+                                <div class="candidate-details">
+                                    <h3>Michael Williams</h3>
+                                    <p class="party republican">Republican Party</p>
+                                </div>
+                            </div>
+                            <div class="vote-stats">
+                                <div class="vote-count">567,234</div>
+                                <div class="vote-percentage">45.4%</div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill republican" style="width: 45.4%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="candidate-result">
+                            <div class="candidate-info">
+                                <div class="candidate-photo">
+                                    <div class="photo-placeholder">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                </div>
+                                <div class="candidate-details">
+                                    <h3>Robert Davis</h3>
+                                    <p class="party independent">Independent</p>
+                                </div>
+                            </div>
+                            <div class="vote-stats">
+                                <div class="vote-count">37,707</div>
+                                <div class="vote-percentage">3.1%</div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill independent" style="width: 3.1%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Senate Results -->
+                <div class="results-section">
+                    <div class="section-header">
+                        <h2>U.S. Senate</h2>
+                        <div class="reporting-status">97.2% reporting</div>
+                    </div>
+                    
+                    <div class="candidates-results">
+                        <div class="candidate-result winner">
+                            <div class="candidate-info">
+                                <div class="candidate-photo">
+                                    <div class="photo-placeholder">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="winner-badge">
+                                        <i class="fas fa-crown"></i>
+                                    </div>
+                                </div>
+                                <div class="candidate-details">
+                                    <h3>Maria Martinez</h3>
+                                    <p class="party democratic">Democratic Party</p>
+                                </div>
+                            </div>
+                            <div class="vote-stats">
+                                <div class="vote-count">658,442</div>
+                                <div class="vote-percentage">53.2%</div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill democratic" style="width: 53.2%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="candidate-result">
+                            <div class="candidate-info">
+                                <div class="candidate-photo">
+                                    <div class="photo-placeholder">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                </div>
+                                <div class="candidate-details">
+                                    <h3>James Thompson</h3>
+                                    <p class="party republican">Republican Party</p>
+                                </div>
+                            </div>
+                            <div class="vote-stats">
+                                <div class="vote-count">579,123</div>
+                                <div class="vote-percentage">46.8%</div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill republican" style="width: 46.8%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proposition Results -->
+                <div class="results-section">
+                    <div class="section-header">
+                        <h2>Proposition 15 - Education Funding</h2>
+                        <div class="reporting-status">99.1% reporting</div>
+                    </div>
+                    
+                    <div class="proposition-results">
+                        <div class="proposition-result winner">
+                            <div class="option-info">
+                                <div class="option-icon yes">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                                <div class="option-details">
+                                    <h3>YES</h3>
+                                    <p>Support increased education funding</p>
+                                </div>
+                                <div class="winner-badge">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
+                            <div class="vote-stats">
+                                <div class="vote-count">723,156</div>
+                                <div class="vote-percentage">62.3%</div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill yes" style="width: 62.3%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="proposition-result">
+                            <div class="option-info">
+                                <div class="option-icon no">
+                                    <i class="fas fa-thumbs-down"></i>
+                                </div>
+                                <div class="option-details">
+                                    <h3>NO</h3>
+                                    <p>Oppose increased taxation</p>
+                                </div>
+                            </div>
+                            <div class="vote-stats">
+                                <div class="vote-count">437,891</div>
+                                <div class="vote-percentage">37.7%</div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill no" style="width: 37.7%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-footer">
+                <div class="disclaimer">
+                    <p><strong>Note:</strong> Results are unofficial until certified by the election authority. 
+                    Data is updated every 2 minutes from official sources.</p>
+                </div>
+                <div class="share-results">
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-share"></i>
+                        Share Results
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-download"></i>
+                        Export Data
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
